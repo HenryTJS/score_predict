@@ -26,11 +26,6 @@ for x, y in zip(content, [i for i in range(1, N + 1)]):
     relation[x] = y
 
 def already_score(file_name, rounds=None):
-    """读取已完成的比赛数据
-    Args:
-        file_name: 数据文件路径
-        rounds: 要读取的轮数，None表示读取全部
-    """
     with open(file_name, "r", encoding="utf-8") as file:
         all_games = [line.strip().split() for line in file.readlines()]
     
@@ -112,7 +107,6 @@ def random_score(already):
     return graph
 
 def simulate_round(rounds):
-    """模拟指定轮数后的出线概率"""
     already = already_score(f"scores/{PRE}_scores.txt", rounds)
     win = np.zeros((N, N), dtype=int)
     
