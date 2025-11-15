@@ -14,7 +14,7 @@ WIN = 8  # 晋级球队数
 VICTORY = 3  # 胜得分
 DRAW = 1  # 平得分
 LOSS = 0  # 负得分
-PRE = "suchao"  # 预测的比赛
+PRE = "xiangchao"  # 预测的比赛
 
 with open(f"teams/{PRE}_teams.txt", "r", encoding="utf-8") as file:
     content = [line.strip() for line in file.readlines()]  # 球队名称
